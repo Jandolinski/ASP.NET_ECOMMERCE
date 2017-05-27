@@ -13,6 +13,7 @@ namespace ASP.NET_ECOMMERCE.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Product name is required")]
+	[MaxLength(45, ErrorMessage = "The maximum length must be upto 45 characters only")]
         public string Name { get; set; }
 
         public string Description { get; set; }
