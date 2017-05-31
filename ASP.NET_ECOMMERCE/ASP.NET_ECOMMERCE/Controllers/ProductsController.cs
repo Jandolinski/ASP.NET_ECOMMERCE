@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using ASP.NET_ECOMMERCE.DataContext;
 using ASP.NET_ECOMMERCE.Models;
-//testtesttest
+
 namespace ASP.NET_ECOMMERCE.Controllers
 {
     public class ProductsController : Controller
@@ -18,7 +18,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
         // GET: Products
         public ActionResult Index()
         {
-            var products = db.Products.Include(p => p.Category);
+            var products = db.Products.Include(p => p.Category).Include(p => p.Producer);
             return View(products.ToList());
         }
 
@@ -41,6 +41,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name");
+            ViewBag.ProducerId = new SelectList(db.Producers, "Id", "Name");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Description,Price,CategoryId")] Product product)
+        public ActionResult Create([Bind(Include = "Id,Name,Price,CategoryId,ProducerId")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -59,6 +60,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
             }
 
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", product.CategoryId);
+            ViewBag.ProducerId = new SelectList(db.Producers, "Id", "Name", product.ProducerId);
             return View(product);
         }
 
@@ -75,6 +77,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
                 return HttpNotFound();
             }
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", product.CategoryId);
+            ViewBag.ProducerId = new SelectList(db.Producers, "Id", "Name", product.ProducerId);
             return View(product);
         }
 
@@ -83,7 +86,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Description,Price,CategoryId")] Product product)
+        public ActionResult Edit([Bind(Include = "Id,Name,Price,CategoryId,ProducerId")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -92,6 +95,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", product.CategoryId);
+            ViewBag.ProducerId = new SelectList(db.Producers, "Id", "Name", product.ProducerId);
             return View(product);
         }
 
