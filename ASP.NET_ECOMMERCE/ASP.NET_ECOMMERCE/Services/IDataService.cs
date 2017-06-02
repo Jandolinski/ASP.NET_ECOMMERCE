@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ASP.NET_ECOMMERCE.Services
 {
-    interface IDataService<T> : IDisposable
+    public interface IDataService<T> : IDisposable
     {
         T GetById(int id);
         void Save(T obj);

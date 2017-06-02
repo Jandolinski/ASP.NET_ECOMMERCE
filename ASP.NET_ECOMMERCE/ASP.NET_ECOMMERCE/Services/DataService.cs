@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Web;
 using ASP.NET_ECOMMERCE.DataContext;
 
 namespace ASP.NET_ECOMMERCE.Services
