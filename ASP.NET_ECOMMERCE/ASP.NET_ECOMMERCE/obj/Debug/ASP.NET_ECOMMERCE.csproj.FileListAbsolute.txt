@@ -169,3 +169,15 @@ C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\b
 C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Autofac.xml
 C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\obj\Debug\ASP.NET_ECOMMERCE.Migrations.DataProvidersandBootstrapper.resources
 C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\obj\Debug\ASP.NET_ECOMMERCE.Migrations.RefactoringControllers.resources
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.Unity.dll
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.Unity.xml
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.Unity.Mvc.dll
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\WebActivatorEx.dll
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Microsoft.Practices.Unity.Mvc.xml

@@ -1,10 +1,13 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 using ASP.NET_ECOMMERCE.DataContext;
 using ASP.NET_ECOMMERCE.DataProvider;
 using ASP.NET_ECOMMERCE.Models;
+using Autofac;
+using Autofac.Core;
 using Microsoft.Ajax.Utilities;
 using Microsoft.Practices.Unity;
 namespace ASP.NET_ECOMMERCE.Controllers
