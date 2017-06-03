@@ -165,3 +165,7 @@ C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\o
 C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\obj\Debug\ASP.NET_ECOMMERCE.Migrations.InitialCreate.resources
 C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\obj\Debug\ASP.NET_ECOMMERCE.csproj.GenerateResource.Cache
 C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\obj\Debug\ASP.NET_ECOMMERCE.Migrations.First.resources
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Autofac.dll
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\bin\Autofac.xml
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\obj\Debug\ASP.NET_ECOMMERCE.Migrations.DataProvidersandBootstrapper.resources
+C:\Users\Haker\Documents\ASP.NET ECOMMERCE\ASP.NET_ECOMMERCE\ASP.NET_ECOMMERCE\obj\Debug\ASP.NET_ECOMMERCE.Migrations.RefactoringControllers.resources
