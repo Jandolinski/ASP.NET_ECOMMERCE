@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using ASP.NET_ECOMMERCE.DataContext;
 using ASP.NET_ECOMMERCE.Models;
 using ASP.NET_ECOMMERCE.Services;
 
@@ -38,16 +39,17 @@ namespace ASP.NET_ECOMMERCE.DataProvider
 
         }
 
-        public Product GetByName(string name)
-        {
-            return _dataServiceCreator.GetByName(name);
-        }
-
         public ICollection<Product> GetAllProducts()
         {
 
             return _dataServiceCreator.GetAll();
 
+        }
+        //todo do refaktoryzacji
+        public Product GetProductByName(string name)
+        {
+            var context=new EcommerceDataContext();
+            return context.Products.FirstOrDefault(t => t.Name.Equals(name));
         }
     }
 }

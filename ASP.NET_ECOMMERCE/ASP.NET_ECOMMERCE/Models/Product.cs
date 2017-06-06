@@ -6,6 +6,7 @@ namespace ASP.NET_ECOMMERCE.Models
     public class Product
     {
         //public int Id { get; set; }
+        
         [Required(ErrorMessage = "Product name is required")]
         public string Name { get; set; }
 

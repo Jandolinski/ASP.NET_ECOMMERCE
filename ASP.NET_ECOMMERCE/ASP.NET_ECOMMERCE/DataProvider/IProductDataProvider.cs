@@ -8,7 +8,7 @@ namespace ASP.NET_ECOMMERCE.DataProvider
         Product GetRelationshipById(int? id);
         void SaveProduct(Product product);
         void DeleteProduct(int id);
-        Product GetByName(string name);
+        Product GetProductByName(string name);
         ICollection<Product> GetAllProducts();
     }
 }

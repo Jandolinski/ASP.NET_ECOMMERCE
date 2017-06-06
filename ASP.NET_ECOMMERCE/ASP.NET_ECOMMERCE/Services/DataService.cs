@@ -28,11 +28,6 @@ namespace ASP.NET_ECOMMERCE.Services
             }
         }
 
-        public T GetByName(string name)
-        {
-            return _ecommerceDataContext.Set<T>().Find(name);
-        }
-
         public ICollection<T> GetAll()
         {
             return _ecommerceDataContext.Set<T>().ToList();

@@ -26,13 +26,13 @@ namespace ASP.NET_ECOMMERCE.Controllers
             return View(_productDataProvider.GetAllProducts().ToList());
         }
 
-        public ActionResult Details(int? id)
+        public ActionResult Details(string name)
         {
-            if (id == null)
+            if (name == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var product = _productDataProvider.GetRelationshipById(id);
+            var product = _productDataProvider.GetProductByName(name);
             if (product == null)
             {
                 return HttpNotFound();
@@ -53,6 +53,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 _productDataProvider.SaveProduct(product);
                 return RedirectToAction("Index");
             }
@@ -68,7 +69,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var product = _productDataProvider.GetByName(name);
+            var product = _productDataProvider.GetProductByName(name);
             if (product == null)
             {
                 return HttpNotFound();
@@ -100,7 +101,7 @@ namespace ASP.NET_ECOMMERCE.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var product = _productDataProvider.GetByName(name);
+            var product = _productDataProvider.GetProductByName(name);
             if (product == null)
             {
                 return HttpNotFound();
@@ -111,9 +112,11 @@ namespace ASP.NET_ECOMMERCE.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string name)
         {
-            _productDataProvider.DeleteProduct(id);
+            var product = _productDataProvider.GetProductByName(name);
+            //musisz sobie analogicznie napisac repozytoriumktore ci znajdzie po nazwie progudkt a nastepnie usunie (linq)
+           // _productDataProvider.DeleteProduct(product.Name);
             return RedirectToAction("Index");
         }
 
