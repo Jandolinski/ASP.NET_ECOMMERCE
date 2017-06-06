@@ -6,7 +6,7 @@ namespace ASP.NET_ECOMMERCE.Models
     public class Category
     {
 
-        public int Id { get; set; }
+        public int CategoryId { get; set; }
 
         [Display(Name = "Category")]
         [Required(ErrorMessage = "Category name is required")]

@@ -42,8 +42,8 @@ namespace ASP.NET_ECOMMERCE.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(_categoryDataProvider.GetAllCategories(), "Id", "Name");
-            ViewBag.ProducerId = new SelectList(_producerDataProvider.GetAllProducers(), "Id", "Name");
+            ViewBag.CategoryId = new SelectList(_categoryDataProvider.GetAllCategories(), "CategoryId", "Name");
+            ViewBag.ProducerId = new SelectList(_producerDataProvider.GetAllProducers(), "ProducerId", "Name");
             return View();
         }
 
@@ -57,24 +57,24 @@ namespace ASP.NET_ECOMMERCE.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryId = new SelectList(_categoryDataProvider.GetAllCategories(), "Id", "Name", product.CategoryId);
-            ViewBag.ProducerId = new SelectList(_producerDataProvider.GetAllProducers(), "Id", "Name", product.ProducerId);
+            ViewBag.CategoryId = new SelectList(_categoryDataProvider.GetAllCategories(), "CategoryId", "Name");
+            ViewBag.ProducerId = new SelectList(_producerDataProvider.GetAllProducers(), "ProducerId", "Name");
             return View(product);
         }
 
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string name)
         {
-            if (id == null)
+            if (name == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var product = _productDataProvider.GetRelationshipById(id);
+            var product = _productDataProvider.GetByName(name);
             if (product == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryId = new SelectList(_categoryDataProvider.GetAllCategories(), "Id", "Name", product.CategoryId);
-            ViewBag.ProducerId = new SelectList(_producerDataProvider.GetAllProducers(), "Id", "Name", product.ProducerId);
+            ViewBag.CategoryId = new SelectList(_categoryDataProvider.GetAllCategories(), "CategoryId", "Name");
+            ViewBag.ProducerId = new SelectList(_producerDataProvider.GetAllProducers(), "ProducerId", "Name");
             return View(product);
 
         }
@@ -88,19 +88,19 @@ namespace ASP.NET_ECOMMERCE.Controllers
                 _productDataProvider.SaveProduct(product);
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryId = new SelectList(_categoryDataProvider.GetAllCategories(), "Id", "Name", product.CategoryId);
-            ViewBag.ProducerId = new SelectList(_producerDataProvider.GetAllProducers(), "Id", "Name", product.ProducerId);
+            ViewBag.CategoryId = new SelectList(_categoryDataProvider.GetAllCategories(), "CategoryId", "Name");
+            ViewBag.ProducerId = new SelectList(_producerDataProvider.GetAllProducers(), "ProducerId", "Name");
             return View(product);
 
         }
 
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string name)
         {
-            if (id == null)
+            if (name == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var product = _productDataProvider.GetRelationshipById(id);
+            var product = _productDataProvider.GetByName(name);
             if (product == null)
             {
                 return HttpNotFound();

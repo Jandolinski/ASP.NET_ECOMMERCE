@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Data;
 
 namespace ASP.NET_ECOMMERCE.Models
 {
     public class Product
     {
-        public int Id { get; set; }
-
+        //public int Id { get; set; }
         [Required(ErrorMessage = "Product name is required")]
         public string Name { get; set; }
 
@@ -15,8 +15,8 @@ namespace ASP.NET_ECOMMERCE.Models
 
         public int ProducerId { get; set; }
 
-        public virtual Category Category { get; set; }
+        //public virtual Category Category { get; set; }
 
-        public virtual Producer Producer { get; set; }
+        //public virtual Producer Producer { get; set; }
     }
 }

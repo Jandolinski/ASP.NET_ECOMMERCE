@@ -8,6 +8,7 @@ namespace ASP.NET_ECOMMERCE.Services
         T GetById(int id);
         void Save(T obj);
         void Delete(int id);
+        T GetByName(string name);
         ICollection<T> GetAll();
     }
 }

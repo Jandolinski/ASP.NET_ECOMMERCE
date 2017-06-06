@@ -5,7 +5,7 @@ namespace ASP.NET_ECOMMERCE.Models
 {
     public class Producer
     {
-        public int Id { get; set; }
+        public int ProducerId { get; set; }
 
         [Display(Name = "Producer's name")]
         [Required(ErrorMessage = "Producer's name is required")]

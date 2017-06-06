@@ -22,20 +22,35 @@ namespace ASP.NET_ECOMMERCE.DataContext
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Category>().HasKey(n => n.Id);
-            modelBuilder.Entity<Producer>().HasKey(n => n.Id);
+            modelBuilder.Entity<Category>().HasKey(n => n.CategoryId);
+            modelBuilder.Entity<Producer>().HasKey(n => n.ProducerId);
             modelBuilder.Entity<Product>().HasKey(n => new {n.CategoryId, n.ProducerId});
 
-            modelBuilder.Entity<Product>()
-                .HasRequired(q => q.Category)
-                .WithMany(q => q.Products)
-                .HasForeignKey(q => q.CategoryId);
 
-            modelBuilder.Entity<Product>()
-                .HasRequired(q => q.Producer)
-                .WithMany(q => q.Products)
-                .HasForeignKey(q => q.ProducerId);
+          
+            //modelBuilder.Entity<Product>()
+            //    .HasRequired(q => q.Category)
+            //    .WithMany(q => q.Products)
+            //    .HasForeignKey(q => q.CategoryId);
+
+            //modelBuilder.Entity<Product>()
+            //    .HasRequired(q => q.Producer)
+            //    .WithMany(q => q.Products)
+            //    .HasForeignKey(q => q.ProducerId);
+
+            //modelBuilder.Entity<Product>()
+            //    .HasRequired(t => t.ProducerId)
+            //    .WithMany(t => t.)
+
+            //modelBuilder.Entity<Product>()
+            //    .HasRequired(t => t.User)
+            //    .WithMany(t => t.UserEmails)
+            //    .HasForeignKey(t => t.UserID);
+
+
+
         }
+    
 
         public static EcommerceDataContext Create()
         {

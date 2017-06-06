@@ -38,6 +38,11 @@ namespace ASP.NET_ECOMMERCE.DataProvider
 
         }
 
+        public Product GetByName(string name)
+        {
+            return _dataServiceCreator.GetByName(name);
+        }
+
         public ICollection<Product> GetAllProducts()
         {
 
